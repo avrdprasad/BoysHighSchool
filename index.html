@@ -9,11 +9,12 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
     header {
       text-align: center;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-bottom: 1px solid #ccc;
     }
@@ -41,19 +42,24 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      cursor: pointer;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    section {
+    .section {
+      display: none;
       padding: 40px 20px;
-      background: white;
+      background: rgba(255,255,255,0.95);
       margin: 20px auto;
       max-width: 900px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    section h2 {
+    .section.active {
+      display: block;
+    }
+    .section h2 {
       color: #004d99;
       margin-bottom: 10px;
     }
@@ -65,41 +71,69 @@
     <h1>Z P BOYS HIGH SCHOOL - CHEEPURUPALLI</h1>
     <p>Sowing Seeds of Knowledge</p>
   </header>
+  <marquee behavior="scroll" direction="left" scrollamount="5" style="
+  color: #fff;
+  font-weight: bold;
+  background: #c00371;
+  padding: 12px;
+  font-size: 18px;
+  animation: blink 1.5s linear infinite;
+">
+  WELCOME TO BOYS HIGH SCHOOL CHEEPURUPALLI
+</marquee>
+
+<style>
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+</style>
+
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#faculty">Faculty</a>
-    <a href="#alumni">Alumni</a>
-    <a href="#donors">Donors</a>
-    <a href="#contact">Contact</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('faculty')">Faculty</a>
+    <a onclick="showSection('alumni')">Alumni</a>
+    <a onclick="showSection('donors')">Donors</a>
+    <a onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="section active">
     <h2>About Our School</h2>
     <p>Welcome to Z P Boys High School, Cheepurupalli. Our institution is committed to providing quality education and holistic development for rural students.</p>
   </section>
 
-  <section id="faculty">
+  <section id="faculty" class="section">
     <h2>Our Faculty</h2>
     <p>Our faculty members are dedicated and experienced educators who inspire and guide students to achieve academic excellence.</p>
   </section>
 
-  <section id="alumni">
+  <section id="alumni" class="section">
     <h2>Alumni</h2>
     <p>We take pride in our successful alumni who have contributed to society in various fields. This section will highlight their achievements.</p>
   </section>
 
-  <section id="donors">
+  <section id="donors" class="section">
     <h2>Donors</h2>
     <p>We sincerely thank our donors whose contributions help us enhance infrastructure and provide better facilities to students.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <p>📍 Church Road, Beside TTD Kalyana Mandapam, Main Road, Cheepurupalli - 535128, Vizianagaram District, AP<br>
-    📞 9640626306<br>
-    📧 avrdprasad@gmail.com</p>
+    <p> 📍 Church Road, Beside TTD Kalyana Mandapam, Main Road, Cheepurupalli - 535128, Vizianagaram District, AP<br>
+        📞 9640626306<br>
+        📧 avrdprasad@gmail.com</p>
   </section>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
