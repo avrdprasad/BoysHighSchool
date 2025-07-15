@@ -190,14 +190,19 @@
     <h2>Achievements</h2>
     <p>Our School Achievements</p>
   </section>
-  <section id="alumni" class="section">
+ <section id="alumni" class="section">
   <h2>Alumni</h2>
-  <p>Please select an academic year to view alumni details:</p>
-    <select id="alumniYearDropdown" onchange="showAlumniPage(this.value)">
-    <option value="">-- Select Year --</option>
-    <!-- Years will be filled dynamically using JS -->
+  <p>Select an academic year to view alumni details:</p>
+  <select onchange="goToAlumniYear(this)">
+    <option value="">-- Select Academic Year --</option>
+    <!-- Latest year to 1947 -->
+    <script>
+      for (let y = 2024; y >= 1947; y--) {
+        document.write(`<option value="${y}-${y + 1}">${y}-${y + 1}</option>`);
+      }
+    </script>
   </select>
-
+</section>
   <div id="alumniContent" style="margin-top: 500px;">
     <!-- Alumni data for selected year will show here -->
   </div>
