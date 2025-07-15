@@ -62,75 +62,131 @@
       color: #004d99;
       margin-bottom: 10px;
     }
-
-    /* Responsive Layout */
-    @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .photo-block {
-        position: static !important;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-    }
   </style>
 </head>
 <body>
   <!-- CM Photo Block -->
-  <div class="photo-block" style="position: absolute; top: 20px; left: 20px; text-align: center; font-size: 10px;">
-    <img src="images/cm.jpg" alt="Chief Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
-    <div style="max-width: 200px; color: #222; margin-top: 6px;">
-      <strong>Sri. Nara Chandra Babu Naidu</strong><br />
-      Honorable Chief Minister,<br />
-      Govt of Andhra Pradesh
-    </div>
+<div style="position: absolute; top: 20px; left: 20px; text-align: center; font-size: 10px;">
+  <img src="images/cm.jpg" alt="Chief Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
+  <div style="max-width: 200px; color: #222; margin-top: 6px;">
+    <strong>Sri. Nara Chandra Babu Naidu</strong><br />
+    Honorable Chief Minister,<br />
+    Govt of Andhra Pradesh
   </div>
+</div>
 
-  <!-- HRD Minister Photo Block -->
-  <div class="photo-block" style="position: absolute; top: 20px; left: 170px; text-align: center; font-size: 10px;">
-    <img src="images/lokesh.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
-    <div style="max-width: 200px; color: #222; margin-top: 6px;">
-      <strong>Sri. Nara Lokesh</strong><br />
-      HRD, IT-Ele & Commu Minister,<br />
-      Govt of Andhra Pradesh
-    </div>
+<!-- HRD Minister Photo Block -->
+<div style="position: absolute; top: 20px; left: 170px; text-align: center; font-size: 10px;">
+  <img src="images/lokesh.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
+  <div style="max-width: 200px; color: #222; margin-top: 6px;">
+    <strong>Sri. Nara Lokesh</strong><br />
+    HRD, IT-Ele & Commu Minister, <br />
+    Govt of Andhra Pradesh
   </div>
-
-  <!-- Dist Collector Photo Block -->
-  <div class="photo-block" style="position: absolute; top: 20px; left: 320px; text-align: center; font-size: 10px;">
-    <img src="images/collector.jpg" alt="District Collector" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
-    <div style="max-width: 200px; color: #222; margin-top: 6px;">
-      <strong>Dr. B.R. Ambedkar, IAS</strong><br />
-      District Collector,<br />
-      Vizianagaram District
-    </div>
+</div>
+<!-- Dist Collector Photo Block -->
+<div style="position: absolute; top: 20px; left: 320px; text-align: center; font-size: 10px;">
+  <img src="images/collector.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
+  <div style="max-width: 200px; color: #222; margin-top: 6px;">
+    <strong>Dr.B.R.Ambedkar, IAS</strong><br />
+    District Collecter, <br />
+    Viziangaram District
   </div>
+</div>
+</div>
+  <header>
+    <img src="images/logo.jpg" alt="School Logo" />
+    <h1>Z P BOYS HIGH SCHOOL - CHEEPURUPALLI</h1>
+    <p>Sowing Seeds of Knowledge</p>
+  </header>
+  <marquee behavior="scroll" direction="left" scrollamount="5" style="
+  color: #fff;
+  font-weight: bold;
+  background: #c00371;
+  padding: 12px;
+  font-size: 18px;
+  animation: blink 1.5s linear infinite;
+">
+  WELCOME TO BOYS HIGH SCHOOL CHEEPURUPALLI
+</marquee>
 
+<style>
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+</style>
+
+
+  <nav>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('faculty')">Faculty</a>
+    <a onclick="showSection('Achievements')">Achievements</a>
+    <a onclick="showSection('alumni')">Alumni</a>
+    <a onclick="showSection('donors')">Donors</a>
+    <a onclick="showSection('AILab')">AI Skills Lab</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="about" class="section active">
+    <h2>About Our School</h2>
+    <p>Welcome to Z P Boys High School, Cheepurupalli. Our institution is committed to providing quality education and holistic development for rural students.</p>
+    <p>
+    Z P Boys High School, Cheepurupalli was established in the year <strong>1947</strong>, the same year our nation gained independence. Since then, our school has stood as a pillar of knowledge and progress for the people of this region.
+  </p>
+  <p>
+    Thousands of students have passed through our gates, gaining not only academic knowledge but also values, discipline, and life skills. Many of our alumni have gone on to build successful careers and lives across India and around the world — in education, engineering, medicine, business, and public service.
+  </p>
+  <p>
+    We are proud of our rich heritage and remain committed to shaping responsible, capable citizens who will continue to make a positive impact in society.
+  </p>
+  </section>
+
+  <section id="faculty" class="section">
+    <h2>Our Faculty</h2>
+    <p>Our faculty members are dedicated and experienced educators who inspire and guide students to achieve academic excellence.</p>
+  </section>
+  <section id="Achievements" class="section">
+    <h2>Achievements</h2>
+    <p>Our School Achievements</p>
+  </section>
   <section id="alumni" class="section">
     <h2>Alumni</h2>
-    <p>Select an academic year to view alumni:</p>
-    <select id="alumniSelect" onchange="openAlumniPage(this.value)">
-      <option value="">-- Select Year --</option>
-      <script>
-        for (let year = 2024; year >= 1947; year--) {
-          let nextYear = year + 1;
-          let option = document.createElement('option');
-          option.value = `alumni/${year}-${nextYear}.html`;
-          option.text = `${year}-${nextYear}`;
-          document.write(option.outerHTML);
-        }
-      </script>
-    </select>
+    <p>We take pride in our successful alumni who have contributed to society in various fields. This section will highlight their achievements.</p>
+  </section>
+
+  <section id="donors" class="section">
+    <h2>Donors</h2>
+    <p>We sincerely thank our donors whose contributions help us enhance infrastructure and provide better facilities to students.</p>
+  </section>
+  <section id="AILab" class="section">
+    <h2>AI Skills Lab</h2>
+    <p>AI Skills Lab was established in this school on 2nd March, 2024 in collaboration with Intel India organisation.</p>
+  </section>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p> 📍 Church Road, Beside TTD Kalyana Mandapam, Main Road, Cheepurupalli - 535128, Vizianagaram District, AP<br>
+        📞 9640626306<br>
+        📧 avrdprasad@gmail.com</p>
+   <!-- Google Map -->
+  <iframe 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.803436099592!2d83.56677677586387!3d18.31059517555324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3bf5364b4c2b33%3A0x2a3c0afcf1976275!2sGovernment%20Boys%20High%20School!5e0!3m2!1sen!2sin!4v1752517357907!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    height="300" 
+    style="border:2; border-radius: 8px; margin-top: 20px;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
   </section>
 
   <script>
-    function openAlumniPage(page) {
-      if (page) {
-        window.open(page, '_blank');
-      }
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
     }
   </script>
 </body>
-</html>
+</html> 
