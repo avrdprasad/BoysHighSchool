@@ -235,5 +235,13 @@
       document.getElementById(id).classList.add('active');
     }
   </script>
+  <script>
+  function goToAlumniYear(select) {
+    const year = select.value;
+    if (year) {
+      window.location.href = "alumni/" + year + ".html";
+    }
+  }
+</script>
 </body>
 </html> 
