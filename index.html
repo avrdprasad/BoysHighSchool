@@ -77,32 +77,6 @@
     }
   </style>
 </head>
-  <script>
-  // Generate academic years from 2024–25 to 1947–48
-  const dropdown = document.getElementById("alumniYearDropdown");
-  for (let year = 2024; year >= 1947; year--) {
-    const option = document.createElement("option");
-    option.value = `${year}-${(year + 1).toString().slice(2)}`;
-    option.text = `${year}-${(year + 1).toString().slice(2)}`;
-    dropdown.appendChild(option);
-  }
-
-  function showAlumniPage(year) {
-    if (!year) {
-      document.getElementById("alumniContent").innerHTML = "";
-      return;
-    }
-    // For now, we show a placeholder message
-    // You can later link to static HTML or load real data
-    document.getElementById("alumniContent").innerHTML = `
-      <h3>Alumni of Academic Year ${year}</h3>
-      <p>Information for this year will be updated soon.</p>
-    `;
-
-    // Optional: To load real HTML files like alumni/2020-21.html
-    // window.location.href = "alumni/" + year + ".html";
-  }
-</script>
 <body>
   <!-- CM Photo Block -->
 <div style="position: absolute; top: 20px; left: 20px; text-align: center; font-size: 10px;">
@@ -113,7 +87,6 @@
     Govt of Andhra Pradesh
   </div>
 </div>
-
 <!-- HRD Minister Photo Block -->
 <div style="position: absolute; top: 20px; left: 170px; text-align: center; font-size: 10px;">
   <img src="images/lokesh.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
@@ -127,13 +100,12 @@
 <div style="position: absolute; top: 20px; left: 320px; text-align: center; font-size: 10px;">
   <img src="images/collector.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
   <div style="max-width: 200px; color: #222; margin-top: 6px;">
-    <strong>Dr.B.R.Ambedkar, IAS</strong><br />
-    District Collecter, <br />
+    <strong>Dr. B.R. Ambedkar, IAS</strong><br />
+    District Collector, <br />
     Viziangaram District
   </div>
 </div>
-</div>
-  <header>
+<header>
     <img src="images/logo.jpg" alt="School Logo" />
     <h1>Z P BOYS HIGH SCHOOL - CHEEPURUPALLI</h1>
     <p>Sowing Seeds of Knowledge</p>
@@ -156,8 +128,6 @@
   100% { opacity: 1; }
 }
 </style>
-
-
   <nav>
     <a onclick="showSection('about')">About</a>
     <a onclick="showSection('faculty')">Faculty</a>
@@ -200,9 +170,6 @@
     We take pride in our successful alumni who have contributed to society in various fields. This section will highlight their achievements.
   </p>
 </section>
-  <div id="alumniContent" style="margin-top: 500px;">
-    <!-- Alumni data for selected year will show here -->
-  </div>
   <section id="donors" class="section">
     <h2>Donors</h2>
     <p>We sincerely thank our donors whose contributions help us enhance infrastructure and provide better facilities to students.</p>
@@ -218,34 +185,35 @@
         📧 avrdprasad@gmail.com</p>
    <!-- Google Map -->
   <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.803436099592!2d83.56677677586387!3d18.31059517555324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3bf5364b4c2b33%3A0x2a3c0afcf1976275!2sGovernment%20Boys%20High%20School!5e0!3m2!1sen!2sin!4v1752517357907!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-    height="300" 
-    style="border:2; border-radius: 8px; margin-top: 20px;" 
-    allowfullscreen="" 
-    loading="lazy">
-  </iframe>
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.803436099592!2d83.56677677586387!3d18.31059517555324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3bf5364b4c2b33%3A0x2a3c0afcf1976275!2sGovernment%20Boys%20High%20School!5e0!3m2!1sen!2sin!4v1752517357907!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  width="400" height="300"
+  style="border:2px solid #ccc; border-radius: 8px; margin-top: 20px;"
+  allowfullscreen 
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  title="Z P Boys High School Location Map">
+</iframe>
   </section>
-
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-  <script>
-  // Populate academic years from 2024–25 to 1947–48
-  const dropdown = document.getElementById("alumniYearDropdown");
-  for (let year = 2024; year >= 1947; year--) {
-    const option = document.createElement("option");
-    option.value = `${year}-${(year + 1).toString().slice(2)}`;  // like 2024-25
-    option.text = `${year}-${(year + 1).toString().slice(2)}`;
-    dropdown.appendChild(option);
+<script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
   }
 
-  // Redirect to individual alumni pages
+  // Populate academic year dropdown dynamically after page loads
+  window.onload = function () {
+    const dropdown = document.getElementById("alumniYearDropdown");
+    for (let year = 2024; year >= 1947; year--) {
+      const option = document.createElement("option");
+      option.value = `${year}-${(year + 1).toString().slice(2)}`;
+      option.text = `${year}-${(year + 1).toString().slice(2)}`;
+      dropdown.appendChild(option);
+    }
+  };
+
   function goToAlumniYear(select) {
     const year = select.value;
     if (year) {
