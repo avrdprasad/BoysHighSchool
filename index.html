@@ -77,6 +77,32 @@
     }
   </style>
 </head>
+  <script>
+  // Generate academic years from 2024–25 to 1947–48
+  const dropdown = document.getElementById("alumniYearDropdown");
+  for (let year = 2024; year >= 1947; year--) {
+    const option = document.createElement("option");
+    option.value = `${year}-${(year + 1).toString().slice(2)}`;
+    option.text = `${year}-${(year + 1).toString().slice(2)}`;
+    dropdown.appendChild(option);
+  }
+
+  function showAlumniPage(year) {
+    if (!year) {
+      document.getElementById("alumniContent").innerHTML = "";
+      return;
+    }
+    // For now, we show a placeholder message
+    // You can later link to static HTML or load real data
+    document.getElementById("alumniContent").innerHTML = `
+      <h3>Alumni of Academic Year ${year}</h3>
+      <p>Information for this year will be updated soon.</p>
+    `;
+
+    // Optional: To load real HTML files like alumni/2020-21.html
+    // window.location.href = "alumni/" + year + ".html";
+  }
+</script>
 <body>
   <!-- CM Photo Block -->
 <div style="position: absolute; top: 20px; left: 20px; text-align: center; font-size: 10px;">
