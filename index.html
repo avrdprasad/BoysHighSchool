@@ -77,38 +77,77 @@
   </style>
 </head>
 <body>
-  <!-- CM Photo Block -->
-<div style="position: absolute; top: 20px; left: 20px; text-align: center; font-size: 10px;">
-  <img src="images/cm.jpg" alt="Chief Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
-  <div style="max-width: 200px; color: #222; margin-top: 6px;">
-    <strong>Sri. Nara Chandra Babu Naidu</strong><br />
-    Honorable Chief Minister,<br />
-    Govt of Andhra Pradesh
+ <!-- Top Header Block -->
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 20px; flex-wrap: wrap; background-color: rgba(255,255,255,0.9); border-bottom: 1px solid #ccc;">
+
+  <!-- LEFT SECTION -->
+  <div style="display: flex; gap: 20px;">
+    <!-- CM -->
+    <div style="text-align: center; font-size: 12px; width: 180px;">
+      <img src="c:\Users\avrdp\OneDrive\Desktop\images\cm.jpg" alt="CM" style="width: 100px; height: 120px; object-fit: cover; border-radius: 8px;" />
+      <div style="margin-top: 6px;">
+        <strong>Sri. N. Chandra Babu Naidu</strong><br />
+        Chief Minister<br />A.P. Govt
+      </div>
+    </div>
+
+    <!-- HRD Minister -->
+    <div style="text-align: center; font-size: 12px; width: 150px;">
+      <img src="c:\Users\avrdp\OneDrive\Desktop\images\lokesh.jpg" alt="Minister" style="width: 100px; height: 120px; object-fit: cover; border-radius: 8px;" />
+      <div style="margin-top: 6px;">
+        <strong>Sri. Nara Lokesh</strong><br />
+        Minister, HRD & IT<br />A.P. Govt
+      </div>
+    </div>
+
+    <!-- Collector -->
+    <div style="text-align: center; font-size: 12px; width: 150px;">
+      <img src="c:\Users\avrdp\OneDrive\Desktop\images\collector.jpg" alt="Collector" style="width: 100px; height: 120px; object-fit: cover; border-radius: 8px;" />
+      <div style="margin-top: 6px;">
+        <strong>Dr. B.R. Ambedkar, IAS</strong><br />
+        District Collector<br />Vizianagaram
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER SECTION -->
+  <div style="text-align: center; flex-grow: 1;">
+    <img src="images/logo.jpg" alt="School Logo" style="max-width: 100px;" />
+    <h1 style="margin: 8px 0 4px; font-size: 20px; color: #004d99;">Z P BOYS HIGH SCHOOL - CHEEPURUPALLI</h1>
+    <p style="font-size: 14px; font-style: italic; color: #555;">Sowing Seeds of Knowledge</p>
+  </div>
+
+  <!-- RIGHT SECTION -->
+  <div style="display: flex; gap: 20px;">
+    <!-- DEO -->
+    <div style="text-align: center; font-size: 12px; width: 150px;">
+      <img src="c:\Users\avrdp\OneDrive\Desktop\images\deo.jpeg" alt="DEO" style="width: 100px; height: 120px; object-fit: cover; border-radius: 8px;" />
+      <div style="margin-top: 6px;">
+        <strong>Sri. U.Manikyam Naidu</strong><br />
+        District Educational Officer <br /> Vizianagaram 
+      </div>
+    </div>
+
+    <!-- Dy.E.O -->
+    <div style="text-align: center; font-size: 12px; width: 150px;">
+      <img src="c:\Users\avrdp\OneDrive\Desktop\images\deo.jpeg" alt="DyEO" style="width: 100px; height: 120px; object-fit: cover; border-radius: 8px;" />
+      <div style="margin-top: 6px;">
+        <strong style="white-space: nowrap">Smt. P. Sridevi</strong><br />
+        Deputy Educational Officer<br />Cheepurupalli Division <br />
+        Vizianagaram District
+      </div>
+    </div>
+
+    <!-- DEO -->
+    <div style="text-align: center; font-size: 12px; width: 180px;">
+      <img src="C:\Users\avrdp\OneDrive\Desktop\images\deo.jpeg" alt="DEO" style="width: 100px; height: 120px; object-fit: cover; border-radius: 8px;" />
+      <div style="margin-top: 6px;">
+        <strong>Smt D.Uma Maheswari</strong><br />
+        Head Master<br />Z P BOYS HIGH SCHOOL <br />Cheepurupalli
+      </div>
+    </div>
   </div>
 </div>
-<!-- HRD Minister Photo Block -->
-<div style="position: absolute; top: 20px; left: 170px; text-align: center; font-size: 10px;">
-  <img src="images/lokesh.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
-  <div style="max-width: 200px; color: #222; margin-top: 6px;">
-    <strong>Sri. Nara Lokesh</strong><br />
-    HRD, IT-Ele & Commu Minister, <br />
-    Govt of Andhra Pradesh
-  </div>
-</div>
-<!-- Dist Collector Photo Block -->
-<div style="position: absolute; top: 20px; left: 320px; text-align: center; font-size: 10px;">
-  <img src="images/collector.jpg" alt="HRD Minister" style="width: 100px; border-radius: 8px; box-shadow: 0 0 5px #00000033;" />
-  <div style="max-width: 200px; color: #222; margin-top: 6px;">
-    <strong>Dr. B.R. Ambedkar, IAS</strong><br />
-    District Collector, <br />
-    Viziangaram District
-  </div>
-</div>
-<header>
-    <img src="images/logo.jpg" alt="School Logo" />
-    <h1>Z P BOYS HIGH SCHOOL - CHEEPURUPALLI</h1>
-    <p>Sowing Seeds of Knowledge</p>
-  </header>
   <marquee behavior="scroll" direction="left" scrollamount="5" style="
   color: #fff;
   font-weight: bold;
@@ -121,6 +160,71 @@
 </marquee>
 
 <style>
+.dept-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.dept-buttons button {
+  background-color: #004d99;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dept-buttons button:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+.faculty-group {
+  display: none;
+  animation: fadeEffect 0.5s ease-in-out;
+}
+
+.faculty-group.active {
+  display: block;
+}
+
+.faculty-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f4f8fb;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.faculty-card img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #004d99;
+}
+
+.faculty-card h3 {
+  margin: 0 0 8px;
+  color: #004d99;
+}
+
+@media (max-width: 600px) {
+  .faculty-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0.4; }
@@ -180,9 +284,132 @@
   </section>
 
   <section id="faculty" class="section">
-    <h2>Our Faculty</h2>
-    <p>Our faculty members are dedicated and experienced educators who inspire and guide students to achieve academic excellence.</p>
-  </section>
+  <h2>Our Faculty</h2>
+
+ <div class="dept-buttons">
+  <button onclick="showDept('telugu')">TELUGU</button>
+  <button onclick="showDept('hindi')">HINDI</button>
+  <button onclick="showDept('english')">ENGLISH</button>
+  <button onclick="showDept('maths')">MATHS</button>
+  <button onclick="showDept('ps')">PHYSICAL SCIENCE</button>
+  <button onclick="showDept('bs')">BIOLOGICAL SCIENCE</button>
+  <button onclick="showDept('social')">SOCIAL STUDIES</button>
+  <button onclick="showDept('pe')">PHYSICAL EDUCATION</button>
+  <button onclick="showDept('nonteaching')">NON TEACHING</button>
+</div>
+
+<div class="faculty-container">
+  <!-- TELUGU -->
+  <div class="faculty-group active" id="telugu">
+    <div class="faculty-card">
+      <img src="images/telugu1.jpg" alt="Telugu Faculty" />
+      <div>
+        <h3>Smt. Lakshmi Devi</h3>
+        <p><strong>Qualification:</strong> M.A. Telugu, B.Ed.</p>
+        <p><strong>Experience:</strong> 15 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HINDI -->
+  <div class="faculty-group" id="hindi">
+    <div class="faculty-card">
+      <img src="images/hindi1.jpg" alt="Hindi Faculty" />
+      <div>
+        <h3>Shri. Ramesh Kumar</h3>
+        <p><strong>Qualification:</strong> M.A. Hindi, B.Ed.</p>
+        <p><strong>Experience:</strong> 18 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="faculty-group" id="english">
+    <div class="faculty-card">
+      <img src="images/english1.jpg" alt="English Faculty" />
+      <div>
+        <h3>Smt. Sravani</h3>
+        <p><strong>Qualification:</strong> M.A. English, B.Ed.</p>
+        <p><strong>Experience:</strong> 12 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATHS -->
+  <div class="faculty-group" id="maths">
+    <div class="faculty-card">
+      <img src="images/maths1.jpg" alt="Maths Faculty" />
+      <div>
+        <h3>Shri. Kiran Babu</h3>
+        <p><strong>Qualification:</strong> M.Sc. Mathematics, B.Ed.</p>
+        <p><strong>Experience:</strong> 10 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHYSICAL SCIENCE -->
+  <div class="faculty-group" id="ps">
+    <div class="faculty-card">
+      <img src="images/ps1.jpg" alt="Physical Science Faculty" />
+      <div>
+        <h3>Smt. Anitha</h3>
+        <p><strong>Qualification:</strong> M.Sc. Physics, B.Ed.</p>
+        <p><strong>Experience:</strong> 14 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIOLOGICAL SCIENCE -->
+  <div class="faculty-group" id="bs">
+    <div class="faculty-card">
+      <img src="images/bs1.jpg" alt="Biological Science Faculty" />
+      <div>
+        <h3>Shri. Raghavendra</h3>
+        <p><strong>Qualification:</strong> M.Sc. Biology, B.Ed.</p>
+        <p><strong>Experience:</strong> 9 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL STUDIES -->
+  <div class="faculty-group" id="social">
+    <div class="faculty-card">
+      <img src="images/social1.jpg" alt="Social Studies Faculty" />
+      <div>
+        <h3>Smt. Padmavathi</h3>
+        <p><strong>Qualification:</strong> M.A. History, B.Ed.</p>
+        <p><strong>Experience:</strong> 16 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHYSICAL EDUCATION -->
+  <div class="faculty-group" id="pe">
+    <div class="faculty-card">
+      <img src="images/pe1.jpg" alt="Physical Education Faculty" />
+      <div>
+        <h3>Shri. Mahesh</h3>
+        <p><strong>Qualification:</strong> B.P.Ed., M.P.Ed.</p>
+        <p><strong>Experience:</strong> 11 years</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NON TEACHING -->
+  <div class="faculty-group" id="nonteaching">
+    <div class="faculty-card">
+      <img src="images/nonteaching1.jpg" alt="Non Teaching Staff" />
+      <div>
+        <h3>Smt. Jyothi</h3>
+        <p><strong>Designation:</strong> Clerk</p>
+        <p><strong>Experience:</strong> 8 years</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
   <section id="Achievements" class="section">
     <h2>Achievements</h2>
     <p>Our School Achievements</p>
@@ -278,6 +505,13 @@
     slides[slideIndex-1].style.display = "block";
     setTimeout(showSlides, 3000); // Change image every 3 seconds
   }
+  function showDept(deptId) {
+  const groups = document.querySelectorAll('.faculty-group');
+  groups.forEach(g => g.classList.remove('active'));
+  const selected = document.getElementById(deptId);
+  if (selected) selected.classList.add('active');
+}
+
 </script>
 </body>
 </html> 
