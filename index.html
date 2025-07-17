@@ -279,25 +279,26 @@
   max-width: 800px;
   box-shadow: 0 0 10px #ccc;
 }
-
-#achievements h2 {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 20px;
+.achievement-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fdfdfd;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
 }
 
-#achievements ul {
-  list-style-type: none;
-  padding-left: 0;
+.achievement-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-#achievements li {
-  background: #ffffff;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-left: 6px solid #3498db;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+
 }
 </style>
   <nav>
@@ -482,17 +483,33 @@
 </div>
 
 </section>
-<section id="achievements">
-  <h2>Student Achievements - 2024–25</h2>
-  <ul>
-    <li>🎓 <strong>A. Sandeep</strong> got selected for <strong>IIIT</strong>.</li>
-    <li>🏆 <strong>J A S Srividya</strong> received the <strong>Shining Star Award</strong> from Hon’ble Home Minister, AP.</li>
-    <li>📚 <strong>NMMS Scholars:</strong> G. Aditya, K. Pradeep, P. Jagan.</li>
-    <li>💡 <strong>INSPIRE MANAK Awardees:</strong> Two students received ₹10,000 each.</li>
-    <li>🏐 <strong>Sports Selections:</strong> 2 for U-14 Volleyball, 2 for U-17 Cricket.</li>
-  </ul>
+<section id="alumni" class="achievements">
+<div class="achievement-card">
+  <img src="images/achievements/iiit_sandeep.jpg" alt="A. Sandeep - IIIT" class="achievement-img">
+  <p><strong>A. Sandeep</strong><br>Secured admission into <strong>IIIT</strong> with outstanding academic merit.</p>
+</div>
+
+<div class="achievement-card">
+  <img src="images/achievements/srividya_star.jpg" alt="Srividya Shining Star Award" class="achievement-img">
+  <p><strong>J A S Srividya</strong><br>Awarded the <strong>Shining Star</strong> for academic excellence and discipline.</p>
+</div>
+
+<div class="achievement-card">
+  <img src="images/achievements/nmms_students.jpg" alt="NMMS Selected Students" class="achievement-img">
+  <p><strong>NMMS Scholars</strong><br>G. Aditya, K. Pradeep, and P. Jagan – Awarded ₹12,000 per year through NMMS scheme.</p>
+</div>
+
+<div class="achievement-card">
+  <img src="images/achievements/inspire_award.jpg" alt="INSPIRE MANAK Awardees" class="achievement-img">
+  <p><strong>INSPIRE MANAK Awardees</strong><br>Selected for their innovative science projects, each received ₹10,000 grant.</p>
+</div>
+
+<div class="achievement-card">
+  <img src="images/achievements/sports_students.jpg" alt="Sports Achievements" class="achievement-img">
+  <p><strong>Sports Achievements</strong><br>2 students selected for U-14 Volleyball, 2 for U-17 Cricket (Mandal level).</p>
+</div>
 </section>
- <section id="alumni" class="section">
+  <section id="alumni" class="section">
   <h2>Alumni</h2>
   <p>Select an academic year to view alumni details:</p>
   <select id="alumniYearDropdown" onchange="goToAlumniYear(this)">
