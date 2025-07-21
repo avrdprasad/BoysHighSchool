@@ -75,30 +75,40 @@
       cursor: pointer;
       transition: background 0.3s;
     }
+
     button:hover {
       background: #e68900;
-      .back-button {
-  display: inline-block;
-  margin: 20px;
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.back-button:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+    }
+
+    /* ✅ Back button style with animation */
+    .back-button {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
 <body>
-<a href="index.html" class="back-button">← Back to Main Page</a>
+
+  <!-- ✅ Top Back Button -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-button">← Back to Main Page</a>
+  </div>
+
   <header>
     <h1>Support Our School</h1>
     <p>Your generosity helps us create better opportunities for our students</p>
@@ -107,11 +117,13 @@
   <section>
     <h2>Donation Information</h2>
     <p>You can contribute any amount to support school development, student scholarships, or infrastructure projects. Every donation counts!</p>
-     <div class="headmaster-contact">
+
+    <div class="headmaster-contact">
       <h3>Contact Headmaster</h3>
       <p><strong>Name:</strong> Smt. D.Uma Maheswari</p>
       <p><strong>Phone:</strong> +91 7893221207</p>
     </div>
+
     <form>
       <h3>Send Us Your Details (Optional)</h3>
       <input type="text" placeholder="Your Full Name" />
@@ -121,18 +133,11 @@
       <button type="submit">Submit</button>
     </form>
   </section>
-<a href="index.html" style="
-  display: inline-block;
-  margin: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-">
-  ← Back to Main Page
-</a>
+
+  <!-- ✅ Bottom Back Button -->
+  <div style="text-align: center;">
+    <a href="index.html" class="back-button">← Back to Main Page</a>
+  </div>
+
 </body>
 </html>
