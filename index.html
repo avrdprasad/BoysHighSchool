@@ -272,6 +272,24 @@
 @keyframes fadeEffect {
   from {opacity: 0.3}
   to {opacity: 1}
+  .donor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.donor-card {
+  background: #f9f9f9;
+  border-left: 6px solid #004d99;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+}
 }
 </style>
   <nav>
@@ -793,9 +811,28 @@
 
 </section>
   <section id="donors" class="section">
-    <h2>Donors</h2>
-    <p>We sincerely thank our donors whose contributions help us enhance infrastructure and provide better facilities to students.</p>
-  </section>
+  <h2>Scholarship & General Donors</h2>
+  <div class="donor-list">
+    <div class="donor-card">
+      <h4>1. S. Lakshmana Rao</h4>
+      <p><strong>Contribution:</strong> ₹50,000</p>
+      <p><strong>Role:</strong> B.Ed Teacher</p>
+    </div>
+
+    <div class="donor-card">
+      <h4>2. S. Lakshmana Rao & Friends (1968–69 SSC Batch)</h4>
+      <p><strong>Contribution:</strong> ₹60,000</p>
+    </div>
+
+    <div class="donor-card">
+      <h4>3. B. Narasimha Murthy & Savitri</h4>
+      <p><strong>Contribution:</strong> ₹25,000</p>
+    </div>
+
+    <!-- Repeat cards for each donor -->
+  </div>
+</section>
+
   <!-- AI Skills Lab Section -->
   <section id="AILab" class="section">
   <h2 style="text-align:center; font-size: 28px; color: #003366;">AI Skills Lab</h2>
