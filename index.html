@@ -268,45 +268,6 @@
 .fade {
   animation: fadeEffect 1.5s;
 }
-.donors-container {
-  overflow-x: auto;
-  animation: fadeInUp 1.2s ease-in-out;
-}
-
-.donors-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.donors-table thead {
-  background: #3498db;
-  color: #fff;
-}
-
-.donors-table th, .donors-table td {
-  padding: 12px 15px;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.donors-table tbody tr:nth-child(even) {
-  background: #f2f2f2;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Responsive */
 @media (max-width: 600px) {
@@ -319,7 +280,55 @@
     font-size: 1.5rem;
   }
 }
+.donors-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      animation: fadeIn 1s ease-in;
+    }
 
+    .donors-table th, .donors-table td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .donors-table th {
+      background-color: #3498db;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    .donors-table tr:nth-child(even) {
+      background-color: #f2f9ff;
+    }
+
+    .donors-table tr:hover {
+      background-color: #d6f0ff;
+      transition: background-color 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .donors-table th, .donors-table td {
+        font-size: 0.9em;
+        padding: 10px;
+      }
+    }
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
   <nav>
   <a onclick="showSection('about')">About</a>
@@ -833,58 +842,53 @@
           "The discipline, dedication, and sense of purpose I found here are the cornerstones of my journey in the business world."
         </p>
       </div>
-    </div>
-  </div>
-</section>
-<!-- donors section-->
- <section id="donors" style="padding: 2rem; background: #f9f9f9;">
-  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: #2c3e50;">
-    🙏 Donors List 🙏
-  </h2>
-  <div class="donors-container">
-    <table class="donors-table">
-      <thead>
-        <tr>
-          <th>Sl. No.</th>
-          <th>Name of the Donor</th>
-          <th>Donation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Sri Nandigam Yesobu</td><td>₹10,000</td></tr>
-        <tr><td>2</td><td>Sri Kola Venkata Rao</td><td>₹5,000</td></tr>
-        <tr><td>3</td><td>Sri Tadi Venkanna</td><td>₹3,116</td></tr>
-        <tr><td>4</td><td>Sri Nandigam Veerabhadra Rao</td><td>₹2,222</td></tr>
-        <tr><td>5</td><td>Sri Gadadapu Shankar</td><td>₹2,000</td></tr>
-        <tr><td>6</td><td>Sri Devathi Ramu</td><td>₹2,000</td></tr>
-        <tr><td>7</td><td>Sri Mandala Sriramulu</td><td>₹2,000</td></tr>
-        <tr><td>8</td><td>Sri Duggani Yerranna</td><td>₹2,000</td></tr>
-        <tr><td>9</td><td>Sri Vunnam Bheema Rao</td><td>₹2,000</td></tr>
-        <tr><td>10</td><td>Sri Akula Narayana</td><td>₹2,000</td></tr>
-        <tr><td>11</td><td>Sri Chodimella Satyam</td><td>₹2,000</td></tr>
-        <tr><td>12</td><td>Sri Chodimella Ganesh</td><td>₹2,000</td></tr>
-        <tr><td>13</td><td>Sri Atluri Ganapathi</td><td>₹1,116</td></tr>
-        <tr><td>14</td><td>Sri Kolathuru Baburao</td><td>₹1,116</td></tr>
-        <tr><td>15</td><td>Sri Kolathuru Bhaskar</td><td>₹1,116</td></tr>
-        <tr><td>16</td><td>Sri Vallabhaneni Chinna Rao</td><td>₹1,000</td></tr>
-        <tr><td>17</td><td>Sri Ippili Venkateswara Rao</td><td>₹1,000</td></tr>
-        <tr><td>18</td><td>Sri Bendi Satyam</td><td>₹1,000</td></tr>
-        <tr><td>19</td><td>Sri Udayagiri Babu Rao</td><td>₹1,000</td></tr>
-        <tr><td>20</td><td>Sri Duggani Ganesh</td><td>₹1,000</td></tr>
-        <tr><td>21</td><td>Sri Pilla Srinivasa Rao</td><td>₹1,000</td></tr>
-        <tr><td>22</td><td>Sri Kolathuru Muralikrishna</td><td>₹1,000</td></tr>
-        <tr><td>23</td><td>Sri Palli Bhaskar</td><td>₹1,000</td></tr>
-      </tbody>
-    </table>
-    <div style="text-align:center; margin-top: 1.5rem;">
-  <a href="index.html" style="background: #2ecc71; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; transition: background 0.3s ease;">
-    ⬅ Back to Main Page
-  </a>
-</div>
-
-  </div>
-</section>
-<!-- AI Skills Lab Section -->
+    </section>
+  <!-- DONORS SECTION -->
+    <section id="donors" class="section">
+  <h2 style="text-align:center; font-size: 28px; color: #003366;">Donors</h2>
+  <p>We sincerely thank the following donors for their generous contributions to the development of our school.</p>
+  <table class="donors-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Contribution</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Sri Ch. Ramanadham</td><td>₹1,00,000 [Water Plant]</td></tr>
+      <tr><td>Sri S. Lakshmana Rao, B.Ed Teacher</td><td>₹50,000</td></tr>
+      <tr><td>Sri S. Lakshmana Rao & Friends (1968-69 SSC Batch)</td><td>₹60,000</td></tr>
+      <tr><td>Sri B. Narasimha Murthy & Savitri</td><td>₹25,000</td></tr>
+      <tr><td>Sri M.S.N. Raju, Retd. HM</td><td>₹25,000</td></tr>
+      <tr><td>1993-94 SSC Batch</td><td>₹25,000</td></tr>
+      <tr><td>Sri A.J.R. Murthy & Smt. Chittamma (MMRL)</td><td>₹20,000</td></tr>
+      <tr><td>Sri T. Janardhana Rao (MMRL)</td><td>₹10,000</td></tr>
+      <tr><td>Sri N. Jogulamba (MMRL)</td><td>₹10,000</td></tr>
+      <tr><td>Sri M. Laksmi Kantamma & Sanyasayya (MMRL)</td><td>₹10,000</td></tr>
+      <tr><td>Sri M. Manmadha Rao, Rtd. Teacher</td><td>₹10,000</td></tr>
+      <tr><td>Sri T. Srirama Murthy, Retd. HM</td><td>₹10,000</td></tr>
+      <tr><td>Sri K. Anandarau (K. Viswanadham MMRL)</td><td>₹5,000</td></tr>
+      <tr><td>Sri S.K. Sarvaji (MMRL)</td><td>₹5,000</td></tr>
+      <tr><td>Sri T. Vijaya Bhaskar (MMRL)</td><td>₹5,000</td></tr>
+      <tr><td>Sri A. Lakshmana Rao</td><td>₹5,000</td></tr>
+      <tr><td>Sri Ch. Murali Mohana Rao (MMRL)</td><td>₹4,000</td></tr>
+      <tr><td>Sri S.K. Sarvaji</td><td>Donated 55 Desk Benches</td></tr>
+      <tr><td>S.B.I., C.P.P. Branch</td><td>Donated Computer & Fans</td></tr>
+      <tr><td>1991–92 SSC Batch</td><td>Donated LED TV & Gandhi Statue</td></tr>
+      <tr><td>Sri M.V.S.N. Raju</td><td>Donated Saraswathi Devi Statue</td></tr>
+      <tr><td>1971–72 SSC Batch</td><td>Sponsored Auditorium</td></tr>
+      <tr><td>Sri V. Mohana Rao, Rtd. Teacher</td><td>Donated Vivekananda Statue, Megaphone</td></tr>
+      <tr><td>Sri Y. Nageswaramma, Rtd. Teacher</td><td>₹10,000 [Wash Basin]</td></tr>
+      <tr><td>1994–95 SSC Batch</td><td>Donated Entrance Name Board Arch</td></tr>
+      <tr><td>1995–96 SSC Batch</td><td>Donated Leaders’ Photos (Paintings)</td></tr>
+      <tr><td>Sri R. Durga Rao, Old Student</td><td>Donated 70 Litres Colour Paint</td></tr>
+      <tr><td>Sri T. Krupa Prasad</td><td>Donated 7 Water Cans</td></tr>
+      <tr><td>Army Employees (Pramakrishna & Friends, MMRL) and</td></tr>
+      <tr><td>Sri K. Tavitraju (Pundariya) & Sri S. Ramesh Naidu, SSA Staff</td><td>Donated Flag Pole, Platform & Railing</td></tr>
+    </tbody>
+  </table>
+  </section>
+  <!-- AI Skills Lab Section -->
   <section id="AILab" class="section">
   <h2 style="text-align:center; font-size: 28px; color: #003366;">AI Skills Lab</h2>
 
