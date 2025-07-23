@@ -5,115 +5,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Z P Boys High School - Cheepurupalli</title>
-  <style>
-    /* Responsive Layout */
-@media (max-width: 768px) {
+ <style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f0f4f8;
+    color: #333;
+  }
+
+  header {
+    background: #003366;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #004080;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
   nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  .photo-block {
-    position: static !important;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-}
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-    header {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-bottom: 1px solid #ccc;
-    }
-    header img {
-      max-width: 120px;
-      height: auto;
-    }
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 24px;
-      color: #222;
-    }
-    header p {
-      font-size: 14px;
-      color: #666;
-      font-style: italic;
-    }
-    nav {
-      background: #004d99;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      display: none;
-      padding: 40px 20px;
-      background: rgba(255,255,255,0.95);
-      margin: 20px auto;
-      max-width: 900px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .section.active {
-      display: block;
-    }
-    .section h2 {
-      color: #004d99;
-      margin-bottom: 10px;
-    }
-    style
-    .section h2 {
-    color: #004d99;
-    margin-bottom: 10px;
-  }
-
-  .site-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #004d99;
     color: white;
-    font-size: 14px;
-    margin-top: 40px;
-    border-top: 1px solid #ccc;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin: 5px;
   }
-    @keyframes fadeEffect {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
-}
 
-.donor-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
+  nav a:hover {
+    background-color: #0059b3;
+  }
 
-.donor-card {
-  background: #f9f9f9;
-  border-left: 6px solid #004d99;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
+  section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
 
-.donor-card:hover {
-  transform: translateY(-5px);
-}
+  .section h2 {
+    color: #004080;
+    border-bottom: 2px solid #004080;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
 
+  .donor-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .donor-card {
+    background: #f9f9f9;
+    border-left: 6px solid #004d99;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+
+  .donor-card:hover {
+    transform: translateY(-5px);
+  }
+
+  footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @keyframes fadeEffect {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+  }
 </style>
 </head>
 <body>
