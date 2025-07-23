@@ -5,97 +5,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Z P Boys High School - Cheepurupalli</title>
- <style>
-  body {
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: #f0f4f8;
-    color: #333;
-  }
-
-  header {
-    background: #003366;
-    color: #fff;
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  nav {
-    display: flex;
-    justify-content: center;
-    background-color: #004080;
-    padding: 10px;
-    flex-wrap: wrap;
-  }
-
+  <style>
+    /* Responsive Layout */
+@media (max-width: 768px) {
   nav a {
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-    margin: 5px;
+    display: block;
+    margin: 10px 0;
   }
-
-  nav a:hover {
-    background-color: #0059b3;
-  }
-
-  section {
-    padding: 20px;
-    max-width: 1000px;
-    margin: auto;
-  }
-
-  .section h2 {
-    color: #004080;
-    border-bottom: 2px solid #004080;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-  }
-
-  .donor-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-
-  .donor-card {
-    background: #f9f9f9;
-    border-left: 6px solid #004d99;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
-  }
-
-  .donor-card:hover {
-    transform: translateY(-5px);
-  }
-
-  footer {
-    background: #003366;
-    color: white;
+  .photo-block {
+    position: static !important;
     text-align: center;
-    padding: 15px 10px;
-    margin-top: 30px;
+    margin-bottom: 10px;
   }
-
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: center;
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
-
-    nav a {
-      width: 100%;
+    header {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      max-width: 120px;
+      height: auto;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 24px;
+      color: #222;
+    }
+    header p {
+      font-size: 14px;
+      color: #666;
+      font-style: italic;
+    }
+    nav {
+      background: #004d99;
+      padding: 10px 0;
       text-align: center;
     }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      display: none;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.95);
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .section.active {
+      display: block;
+    }
+    .section h2 {
+      color: #004d99;
+      margin-bottom: 10px;
+    }
+    style
+    .section h2 {
+    color: #004d99;
+    margin-bottom: 10px;
   }
 
-  @keyframes fadeEffect {
-    from { opacity: 0.3; }
-    to { opacity: 1; }
+  .site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d99;
+    color: white;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
   }
 </style>
 </head>
@@ -275,29 +268,58 @@
 .fade {
   animation: fadeEffect 1.5s;
 }
-
-@keyframes fadeEffect {
-  from {opacity: 0.3}
-  to {opacity: 1}
-  .donor-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+.donors-container {
+  overflow-x: auto;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
-.donor-card {
-  background: #f9f9f9;
-  border-left: 6px solid #004d99;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+.donors-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.donor-card:hover {
-  transform: translateY(-5px);
+.donors-table thead {
+  background: #3498db;
+  color: #fff;
 }
+
+.donors-table th, .donors-table td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1rem;
 }
+
+.donors-table tbody tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .donors-table th, .donors-table td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
 </style>
   <nav>
   <a onclick="showSection('about')">About</a>
@@ -791,6 +813,7 @@
           "This school laid the foundation for my success. The values and knowledge I received here shaped my life and career."
         </p>
       </div>
+
       <!-- Alumni 2 -->
       <div style="max-width: 300px; background: #f4f8fb; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px; text-align: center;">
         <img src="images/alumni2.jpg" alt="Alumni 2" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #004d99; margin-bottom: 10px;">
@@ -813,56 +836,55 @@
     </div>
   </div>
 </section>
-  <section id="donors" style="padding: 40px; background: #fdfdfd;">
-  <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px; color: #004d99;">
-    Our Esteemed Donors
+<!-- donors section-->
+ <section id="donors" style="padding: 2rem; background: #f9f9f9;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem; color: #2c3e50;">
+    🙏 Donors List 🙏
   </h2>
-  <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; font-family:Segoe UI, sans-serif; font-size:16px;">
-      <thead style="background:#004d99; color:white;">
+  <div class="donors-container">
+    <table class="donors-table">
+      <thead>
         <tr>
-          <th style="padding:10px; border:1px solid #ddd;">S.No</th>
-          <th style="padding:10px; border:1px solid #ddd;">Donor Name</th>
-          <th style="padding:10px; border:1px solid #ddd;">Contribution/Purpose</th>
+          <th>Sl. No.</th>
+          <th>Name of the Donor</th>
+          <th>Donation</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>S. Lakshmana Rao, B.Ed Teacher</td><td>₹50,000</td></tr>
-        <tr><td>2</td><td>S. Lakshmana Rao &amp; Friends (1968–69 SSC Batch)</td><td>₹60,000</td></tr>
-        <tr><td>3</td><td>B. Narasimha Murthy &amp; Savitri</td><td>₹25,000</td></tr>
-        <tr><td>4</td><td>M.S.N. Raju (Retd. H.M.)</td><td>₹25,000</td></tr>
-        <tr><td>5</td><td>1993–94 SSC Batch</td><td>₹25,000</td></tr>
-        <tr><td>6</td><td>A.J.R. Murthy &amp; Smt. Chittamma (MMRL), A. Ramam</td><td>₹20,000</td></tr>
-        <tr><td>7</td><td>T. Janardhana Rao (MMRL)</td><td>₹10,000</td></tr>
-        <tr><td>8</td><td>N. Jogulamba (MMRL)</td><td>₹10,000</td></tr>
-        <tr><td>9</td><td>M. Lakshmi Kantamma &amp; Sanyasayya (MMRL)</td><td>₹10,000</td></tr>
-        <tr><td>10</td><td>K. Ananda Rao (K. Viswanadham MMRL)</td><td>₹5,000</td></tr>
-        <tr><td>11</td><td>S.K. Sarvaji (MMRL)</td><td>₹5,000</td></tr>
-        <tr><td>12</td><td>T. Vijaya Bhaskar (MMRL)</td><td>₹5,000</td></tr>
-        <tr><td>13</td><td>Ch. Murali Mohana Rao (MMRL)</td><td>₹4,000</td></tr>
-        <tr><td>14</td><td>T. Srirama Murthy (Retd. H.M.)</td><td>₹10,000</td></tr>
-        <tr><td>15</td><td>Ch. Ramanadham</td><td>₹1,00,000 (Water Plant)</td></tr>
-        <tr><td>16</td><td>S.K. Sarvaji</td><td>55 Desk Benches</td></tr>
-        <tr><td>17</td><td>S.B.I., CPP Branch</td><td>Computer &amp; Fans</td></tr>
-        <tr><td>18</td><td>1991–92 SSC Batch</td><td>LED TV &amp; Gandhi Statue</td></tr>
-        <tr><td>19</td><td>M.V.S.N. Raju</td><td>Saraswathi Devi Statue</td></tr>
-        <tr><td>20</td><td>1971–72 SSLC Batch</td><td>Auditorium</td></tr>
-        <tr><td>21</td><td>M. Manmadha Rao (Retd. Teacher)</td><td>₹10,000</td></tr>
-        <tr><td>22</td><td>A. Lakshmana Rao</td><td>₹5,000</td></tr>
-        <tr><td>23</td><td>V. Mohana Rao (Retd.)</td><td>Vivekananda Statue &amp; Megaphone</td></tr>
-        <tr><td>24</td><td>Y. Nageswaramma (Retd. Teacher)</td><td>₹10,000 (Wash Basin)</td></tr>
-        <tr><td>25</td><td>1994–95 SSS Batch</td><td>Entrance Name Board Arch</td></tr>
-        <tr><td>26</td><td>1995–96 SSC Batch</td><td>Leaders’ Photos (Paintings)</td></tr>
-        <tr><td>27</td><td>R. Durga Rao (Old Student)</td><td>70 Litres Colour Paint</td></tr>
-        <tr><td>28</td><td>T. Krupa Prasad</td><td>7 Water Cans</td></tr>
-        <tr><td>29</td><td>Army Employees (Pramakrishna &amp; Friends, MMR)</td><td>Various Supplies</td></tr>
-        <tr><td>30</td><td>K. Tavitriraju (Pundariya) &amp; S. Ramesh Naidu (SS Asst.)</td><td>Flag Pole, Platform, Railing</td></tr>
+        <tr><td>1</td><td>Sri Nandigam Yesobu</td><td>₹10,000</td></tr>
+        <tr><td>2</td><td>Sri Kola Venkata Rao</td><td>₹5,000</td></tr>
+        <tr><td>3</td><td>Sri Tadi Venkanna</td><td>₹3,116</td></tr>
+        <tr><td>4</td><td>Sri Nandigam Veerabhadra Rao</td><td>₹2,222</td></tr>
+        <tr><td>5</td><td>Sri Gadadapu Shankar</td><td>₹2,000</td></tr>
+        <tr><td>6</td><td>Sri Devathi Ramu</td><td>₹2,000</td></tr>
+        <tr><td>7</td><td>Sri Mandala Sriramulu</td><td>₹2,000</td></tr>
+        <tr><td>8</td><td>Sri Duggani Yerranna</td><td>₹2,000</td></tr>
+        <tr><td>9</td><td>Sri Vunnam Bheema Rao</td><td>₹2,000</td></tr>
+        <tr><td>10</td><td>Sri Akula Narayana</td><td>₹2,000</td></tr>
+        <tr><td>11</td><td>Sri Chodimella Satyam</td><td>₹2,000</td></tr>
+        <tr><td>12</td><td>Sri Chodimella Ganesh</td><td>₹2,000</td></tr>
+        <tr><td>13</td><td>Sri Atluri Ganapathi</td><td>₹1,116</td></tr>
+        <tr><td>14</td><td>Sri Kolathuru Baburao</td><td>₹1,116</td></tr>
+        <tr><td>15</td><td>Sri Kolathuru Bhaskar</td><td>₹1,116</td></tr>
+        <tr><td>16</td><td>Sri Vallabhaneni Chinna Rao</td><td>₹1,000</td></tr>
+        <tr><td>17</td><td>Sri Ippili Venkateswara Rao</td><td>₹1,000</td></tr>
+        <tr><td>18</td><td>Sri Bendi Satyam</td><td>₹1,000</td></tr>
+        <tr><td>19</td><td>Sri Udayagiri Babu Rao</td><td>₹1,000</td></tr>
+        <tr><td>20</td><td>Sri Duggani Ganesh</td><td>₹1,000</td></tr>
+        <tr><td>21</td><td>Sri Pilla Srinivasa Rao</td><td>₹1,000</td></tr>
+        <tr><td>22</td><td>Sri Kolathuru Muralikrishna</td><td>₹1,000</td></tr>
+        <tr><td>23</td><td>Sri Palli Bhaskar</td><td>₹1,000</td></tr>
       </tbody>
     </table>
+    <div style="text-align:center; margin-top: 1.5rem;">
+  <a href="index.html" style="background: #2ecc71; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; transition: background 0.3s ease;">
+    ⬅ Back to Main Page
+  </a>
+</div>
+
   </div>
 </section>
-</section>
-  <!-- AI Skills Lab Section -->
+<!-- AI Skills Lab Section -->
   <section id="AILab" class="section">
   <h2 style="text-align:center; font-size: 28px; color: #003366;">AI Skills Lab</h2>
 
