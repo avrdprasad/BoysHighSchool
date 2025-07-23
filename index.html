@@ -90,6 +90,30 @@
     margin-top: 40px;
     border-top: 1px solid #ccc;
   }
+    @keyframes fadeEffect {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+.donor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.donor-card {
+  background: #f9f9f9;
+  border-left: 6px solid #004d99;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+}
+
 </style>
 </head>
 <body>
