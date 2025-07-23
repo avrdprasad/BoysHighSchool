@@ -90,6 +90,40 @@
     margin-top: 40px;
     border-top: 1px solid #ccc;
   }
+  .donor-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #c7079d;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #d009eb, #5f08a7);
+  background-size: 200% auto;
+  transition: background-position 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.6);
+  animation: pulse 2s infinite;
+}
+
+.donor-button:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(20, 6, 223, 0.8);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(55, 27, 214, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(94, 4, 153, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(114, 2, 54, 0.6);
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1008,7 +1042,7 @@
 </script>
   <div style="text-align:center; margin-top: 40px;">
   <h3>Support Our School's Growth</h3>
-  <a href="donate.html" style="background-color:#007BFF; color:white; padding: 10px 20px; border-radius: 8px; text-decoration: none;">Become a Donor</a>
+  <a href="donate.html" class="donor-button">Become a Donor</a>
 </div>
   <footer style="text-align: center; padding: 20px; background-color: #004d99; color: white;">
   © 2025 Z P Boys High School, Cheepurupalli. All Rights Reserved.
